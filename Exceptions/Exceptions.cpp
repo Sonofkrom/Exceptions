@@ -17,9 +17,45 @@ char character(char start, int offset);
 int main()
 {
     try {
-        cout << character('a', 1);
+        cout << character('a', 1) << endl;
     }
     catch(invalidRangeException x){
+        cout << "Invalid Range!\n";
+    }
+    catch (invalidCharacterException x) {
+        cout << "Invalid Character!\n";
+    }
+    try {
+        cout << character('B', -5) << endl;
+    }
+    catch (invalidRangeException x) {
+        cout << "Invalid Range!\n";
+    }
+    catch (invalidCharacterException x) {
+        cout << "Invalid Character!\n";
+    }
+    try {
+        cout << character('G', 3) << endl;
+    }
+    catch (invalidRangeException x) {
+        cout << "Invalid Range!\n";
+    }
+    catch (invalidCharacterException x) {
+        cout << "Invalid Character!\n";
+    }
+    try {
+        cout << character('a', 40) << endl;
+    }
+    catch (invalidRangeException x) {
+        cout << "Invalid Range!\n";
+    }
+    catch (invalidCharacterException x) {
+        cout << "Invalid Character!\n";
+    }
+    try {
+        cout << character('?', 1) << endl;
+    }
+    catch (invalidRangeException x) {
         cout << "Invalid Range!\n";
     }
     catch (invalidCharacterException x) {
